@@ -9,31 +9,13 @@
         <i class="bi bi-plus-circle-fill"></i>Adicionar tarefa
     </div>
     <ul class='task-list'>
+        {% for task in tasks %}
         <li class='task-item'>
-            <span>Título da tarefa</span>
+            <span><a href='/task/{{task.id}}'>{{task.title}}</a></span>
             <span><i class="bi bi-trash-fill"></i></span>
             <span><i class="bi bi-pencil-square"></i></span>
         </li>
-        <li class='task-item'>
-            <span>Título da tarefa</span>
-            <span><i class="bi bi-trash-fill"></i></span>
-            <span><i class="bi bi-pencil-square"></i></span>
-        </li>
-        <li class='task-item'>
-            <span>Título da tarefa</span>
-            <span><i class="bi bi-trash-fill"></i></span>
-            <span><i class="bi bi-pencil-square"></i></span>
-        </li>
-        <li class='task-item'>
-            <span>Título da tarefa</span>
-            <span><i class="bi bi-trash-fill"></i></span>
-            <span><i class="bi bi-pencil-square"></i></span>
-        </li>
-        <li class='task-item'>
-            <span>Título da tarefa</span>
-            <span><i class="bi bi-trash-fill"></i></span>
-            <span><i class="bi bi-pencil-square"></i></span>
-        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
