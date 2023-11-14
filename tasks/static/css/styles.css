@@ -22,6 +22,38 @@
     letter-spacing: 1px;
 }
 
+/* Conteúdo */
+
+.list-div{
+    padding: 0;
+}
+
+.task-list{
+    padding-left: 0;
+}
+
+.task-item{
+    list-style: None;
+    font-size: 20px;
+    height: 50px;
+    padding-top: 10px;
+    border: 1px dashed #ccc;
+}
+
+.task-item i{
+    float: right;
+    padding-right: 5px;
+}
+
+.add-div i{
+    padding: 5px;
+}
+
+.add-div{
+    font-size: 20px;
+    height: 40px;
+}
+
 /* Rodapé */
 
 footer{
