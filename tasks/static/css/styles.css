@@ -73,7 +73,6 @@ footer{
     background-color: #333;
     height: 200px;
     border-top: 2px solid #202020;
-    position: relative;
     bottom: 0;
     width: 100%;
     padding-top: 75px;
@@ -99,6 +98,25 @@ ul.messages{
 
 ul.messages li{
     list-style: none;
+}
+
+/* Paginação */
+
+.paginator{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.step-links{
+    position: relative;
+    margin-left: 50%;
+    margin-right: auto;
+}
+
+.step-links .current{
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
