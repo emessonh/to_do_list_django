@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Task
 from .forms import TaskForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -26,6 +27,25 @@ def newTask(request):
     else:
         form = TaskForm()
         return render(request, 'tasks/addtask.html', {'form': form})
+    
+def taskEdit(request, id):
+    task = get_object_or_404(Task, pk=id)
+    form = TaskForm(instance=task)
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            task.save()
+            return redirect('/')
+        else:
+            return render(request, 'tasks/edittask.html', {'form': form, 'task':task})
+    else:
+        return render(request, 'tasks/edittask.html', {'form': form, 'task':task})
+    
+def taskDelete(request, id):
+    task = get_object_or_404(Task, pk=id)
+    task.delete()
+    messages.info(request, 'Tarefa Excluída com sucesso')
+    return redirect('/')
 
 def helloWorld(request):
     return HttpResponse('Hello World!')

@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Adicinando Tarefa{% endblock  %}
+{% block title %}Editando {{task.title}}: {% endblock  %}
 
 {% block content %}
 <div class='offset-1 col-10 list-div'>
-    <h1>Adicione a sua nova tarefa: </h1>
+    <h1>Editando tarefa: </h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type='submit' id='criar-tarefa' class='btn btn-success' value='Criar tarefa'>
+        <input type='submit' id='criar-tarefa' class='btn btn-success' value='Editar Tarefa'>
     </form>
 </div>
 {% endblock %}

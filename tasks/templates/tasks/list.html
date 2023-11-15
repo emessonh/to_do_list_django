@@ -5,20 +5,37 @@
 {% block content %}
 <div class='offset-1 col-10 list-div'>
     <h1>Lista de Tarefas</h1>
+    
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if  message.tags %} class="alert alert-{{message.tags}}" {% endif %}>
+                    {{message}}
+                </li>
+            {% endfor %}
+        </ul>        
+    {% endif %}
+        
+    <ul class='task-list'>
+        {% for task in tasks %}
+        <li class='task-item'>
+            <span><a href='/task/{{task.id}}' style="text-decoration: none;">{{task.title}}</a></span>
+            <a href="delete/{{task.id}}" >
+                <span><i class="bi bi-trash-fill"></i></span>
+            </a>
+            <a href="edit/{{task.id}}" >
+                <span><i class="bi bi-pencil-square" ></i></span>
+            </a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+
     <a id='add-task' href="newtask/">
         <div class='col-2 add-div'>
             <i class="bi bi-plus"></i>Adicionar tarefa
         </div>
     </a>
-    <ul class='task-list'>
-        {% for task in tasks %}
-        <li class='task-item'>
-            <span><a href='/task/{{task.id}}'>{{task.title}}</a></span>
-            <span><i class="bi bi-trash-fill"></i></span>
-            <span><i class="bi bi-pencil-square"></i></span>
-        </li>
-        {% endfor %}
-    </ul>
 </div>
 {% endblock %}
 

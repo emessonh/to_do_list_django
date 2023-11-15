@@ -54,16 +54,17 @@
 }
 
 .add-div i{
-    padding: 7px;
+    padding-left: 7px;
 }
 
 .add-div{
     background-color: rgb(28, 105, 156);
     font-size: 20px;
-    height: 35px;
+    height: 50px;
     color: white;
     margin-bottom: 10px;
     border-radius: 10px;
+    padding: 7px;
 }
 
 /* Rodapé */
@@ -75,13 +76,13 @@ footer{
     position: relative;
     bottom: 0;
     width: 100%;
+    padding-top: 75px;
 }
 
 footer p{
     color: #f5f5f5;
     text-align: center;
     position: relative;
-    top: 50%;
 }
 
 /* Página de criação da tarefa */
@@ -90,5 +91,14 @@ footer p{
     margin-bottom: 10px;
 }
 
+/* Mensagens */
+
+ul.messages{
+    padding: 0;
+}
+
+ul.messages li{
+    list-style: none;
+}
 
 
