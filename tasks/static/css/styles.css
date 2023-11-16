@@ -32,7 +32,7 @@
 
 .list-div{
     padding: 0;
-    height: calc(100%-200px);
+    height: 70vh;
     position: relative;
 }
 
@@ -45,7 +45,7 @@
     font-size: 20px;
     height: 50px;
     padding-top: 10px;
-    border: 1px dashed #ccc;
+    border-bottom: 1px outset #ccc;
 }
 
 .task-item i{
@@ -61,6 +61,7 @@
     background-color: rgb(28, 105, 156);
     font-size: 20px;
     height: 50px;
+    width: 210px;
     margin-bottom: 10px;
     border-radius: 10px;
     padding: 7px;
@@ -74,7 +75,7 @@
 
 footer{
     background-color: #333;
-    height: 200px;
+    height: 22vh;
     border-top: 2px solid #202020;
     bottom: 0;
     width: 100%;
@@ -120,6 +121,22 @@ ul.messages li{
     font-size: 18px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/* Botões da página inicial */
+
+.trash-btn{
+    color: black;
+}
+
+.edit-btn{
+    color: black;
+}
+
+/* login */
+
+#card{
+    margin-bottom: 20px;
 }
 
 

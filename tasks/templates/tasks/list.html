@@ -21,10 +21,10 @@
         <li class='task-item'>
             <span><a href='/task/{{task.id}}' style="text-decoration: none;">{{task.title}}</a></span>
             <a href="delete/{{task.id}}" class="delete-btn">
-                <span><i class="bi bi-trash-fill"></i></span>
+                <span><i class="bi bi-trash-fill trash-btn"></i></span>
             </a>
             <a href="edit/{{task.id}}" >
-                <span><i class="bi bi-pencil-square" ></i></span>
+                <span><i class="bi bi-pencil-square edit-btn" ></i></span>
             </a>
             
         </li>
@@ -33,7 +33,7 @@
 
         <div class='col-2 add-div'>
             <a id='add-task' href="newtask/">
-                <i class="bi bi-plus"></i>Adicionar tarefa
+                <i class="bi bi-plus"></i>Adicionar Tarefa
             </a>
         </div>
         
