@@ -5,7 +5,7 @@
 {% block title %}Login{% endblock  %}
 
 {% block content %}
-<div class='row'>
+<div class='row' style=" margin: 0;padding: 0;height: 66.6vh;position: relative;">
     <div class="col-md-4 offset-md-4">
         <div class="card auth-card" id="card">
             <div class="card-body">
@@ -16,9 +16,9 @@
                     <input type="hidden" name="next" value="{{next}}">
 
                     {{form|crispy}}
-                    <button type="submit" class='btn btn-primary'>Login</button>
-                    <a href="/accounts/register/" id="cadastrar" style="text-decoration: none; color: rgb(21, 21, 21);">
-                        <span>Não tem conta? Cadastre-se</span>
+                    <button type="submit" class='btn btn-primary' style="width: 100%;">Login</button>
+                    <a href="/accounts/register/" style="text-decoration: none; color: rgb(21, 21, 21);">
+                        <p style="margin-top: 10px;">Não tem conta? Cadastre-se</p>
                     </a>
                     
                 </form>

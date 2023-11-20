@@ -5,12 +5,12 @@
 {% block title %}Editando {{task.title}}: {% endblock  %}
 
 {% block content %}
-<div class='offset-1 col-10 list-div'>
+<div class='offset-1 col-10 tarefa'>
     <h1>Editando tarefa: </h1>
     <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <input type='submit' id='criar-tarefa' class='btn btn-success' value='Editar Tarefa'>
+        <input type='submit' class='btn btn-success' value='Editar Tarefa' style="margin-bottom: 15px;">
     </form>
 </div>
 {% endblock %}

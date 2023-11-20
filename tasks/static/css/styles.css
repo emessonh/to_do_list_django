@@ -36,6 +36,12 @@
     position: relative;
 }
 
+.tarefa{
+    padding: 0;
+    height: 70vh;
+    position: relative;
+}
+
 .task-list{
     padding-left: 0;
 }
@@ -69,6 +75,11 @@
 
 .add-div a{
     color: white;
+}
+
+.tarefa .confirmar-operacao{
+    width: 100%;
+    padding-bottom: 200px;
 }
 
 /* Rodapé */
@@ -139,5 +150,9 @@ ul.messages li{
     margin-bottom: 20px;
 }
 
-
-
+.row{
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    position: relative;
+}

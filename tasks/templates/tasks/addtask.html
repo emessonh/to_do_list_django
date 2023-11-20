@@ -5,12 +5,12 @@
 {% block title %}Adicinando Tarefa{% endblock  %}
 
 {% block content %}
-<div class='offset-1 col-10 list-div'>
+<div class='offset-1 col-10 tarefa'>
     <h1>Adicione a sua nova tarefa: </h1>
     <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <input type='submit' id='criar-tarefa' class='btn btn-success' value='Criar tarefa'>
+        <input type='submit' class='btn btn-success' value='Criar tarefa' style="margin-bottom: 20px;">
     </form>
 </div>
 {% endblock %}

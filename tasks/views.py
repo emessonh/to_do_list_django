@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def taskList(request):
-    tasks_list = Task.objects.all().order_by('-created_at')
+    tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
 
     paginator = Paginator(tasks_list, 5)
     page = request.GET.get('page')
@@ -31,6 +31,7 @@ def newTask(request):
         if form.is_valid():
             task = form.save(commit=False)
             task.done = 'Doing'
+            task.user = request.user
             task.save()
             messages.success(request, 'Tarefa adicionada com sucesso')
             return redirect('/')
